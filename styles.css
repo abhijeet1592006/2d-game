@@ -7,7 +7,7 @@ body{
     background-image: url("assets/v-2/land/1.png");
     height: 100vh;
     width: 100dvw;
- 
+    z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -18,16 +18,31 @@ body{
     height: 84px;
     width: 58px;
     background-size: contain;
-    z-index: 9999;
+    z-index: 1;
 
 }
 .ha{
     height: 180px;
     width: 180px;
-    z-index: 1;
+    z-index: 0;
     position: absolute;
     left: -20px;
     background-image: url("/assets/v-2/buildings/h1.png");
     background-position: center;
     background-size: cover;
+    
+}
+.hb{
+    top:200px;
+    height: 180px;
+    width: 180px;
+    z-index: 2;
+    position: absolute;
+    left: -20px;
+    background-image: url("/assets/v-2/buildings/h1.png");
+    background-position: center;
+    background-size: cover;
+
+
+
 }

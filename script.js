@@ -1,6 +1,7 @@
 let x=100;
 let y=200;
 let speed=2;
+h=document.getElementById("hb")
 character=document.getElementById("ch")
 
 
@@ -48,6 +49,12 @@ function update(){
 
     }
 
+    if(y>226){
+        h.style.zIndex=0;
+    }
+    if(y<226){
+        h.style.zIndex=2;
+    }
     character.style.top=y+"px";
     character.style.left=x+"px";
     requestAnimationFrame(update)
