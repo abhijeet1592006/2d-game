@@ -26,8 +26,8 @@ body{
     width: 180px;
     z-index: 0;
     position: absolute;
-    left: -20px;
-    background-image: url("/assets/v-2/buildings/h1.png");
+    left: 10px;
+    background-image: url("/assets/v-2/buildings/h3.png");
     background-position: center;
     background-size: cover;
     
@@ -38,8 +38,22 @@ body{
     width: 180px;
     z-index: 2;
     position: absolute;
-    left: -20px;
-    background-image: url("/assets/v-2/buildings/h1.png");
+    left: 20px;
+    background-image: url("/assets/v-2/buildings/h3.png");
+    background-position: center;
+    background-size: cover;
+
+
+
+}
+.hc{
+    top:200px;
+    height: 180px;
+    width: 180px;
+    z-index: 2;
+    position: absolute;
+    left: 200px;
+    background-image: url("/assets/v-2/buildings/h3.png");
     background-position: center;
     background-size: cover;
 

@@ -26,9 +26,24 @@ addEventListener("keyup",function(e){
 
 })
 
+function collison(playerId,objectId){
 
+    obj1=document.getElementById(playerId).getBoundingClientRect();
+    obj2=document.getElementById(objectId).getBoundingClientRect();
+
+
+    if(obj1.right>obj2.left&&
+        obj2.right>obj1.left+20&&
+        obj1.top+70<obj2.bottom&&
+        obj2.top<obj1.bottom
+    ){
+        return true
+    }
+
+}
 function update(){
-
+    prevx=x;
+    prevy=y;
     if(keys.ArrowUp){
         y-=speed;
         character.style.backgroundImage="url('/assets/v-2/charcter/walking/2.gif')";
@@ -57,6 +72,21 @@ function update(){
     }
     character.style.top=y+"px";
     character.style.left=x+"px";
+
+
+
+
+    if (collison("ch","ha")){
+        x=prevx;
+        y=prevy;
+        character.style.top=y+"px";
+        character.style.left=x+"px";
+    }
+
+
+
+    z("ha","ch")
+ 
     requestAnimationFrame(update)
 }
 
@@ -65,6 +95,26 @@ update()
 
 
 
+//this will change the zindex of object near player to give a 3d look
+function z(targetid,playerid){
+    let obj=document.getElementById(targetid).getBoundingClientRect()
+    let ob=document.getElementById(targetid)
+
+    let player=document.getElementById(playerid).getBoundingClientRect()
+
+    if(player.bottom<obj.bottom){
+        ob.style.zIndex=2
+        
+    }
+    else{
+        ob.style.zIndex=0
+
+
+    }
+
+
+    
+}
 
 
 // Lock Zooming on Desktop
