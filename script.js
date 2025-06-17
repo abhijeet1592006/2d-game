@@ -4,6 +4,11 @@ let speed=2;
 h=document.getElementById("hb")
 character=document.getElementById("ch")
 
+function start(){
+    document.getElementById("tb").style.display="none";
+    document.getElementsByClassName(".ch::after").style.display="none";
+
+}
 
 
 const keys={
