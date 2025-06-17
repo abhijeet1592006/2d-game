@@ -1,6 +1,6 @@
-let x=0;
-let y=0;
-let speed=5;
+let x=100;
+let y=200;
+let speed=2;
 character=document.getElementById("ch")
 
 
@@ -13,7 +13,6 @@ const keys={
 }
 
 addEventListener("keydown",function(e){
-    console.log(e.key)
     if(e.key in keys){
         keys[e.key]=true;
     }
@@ -22,6 +21,8 @@ addEventListener("keyup",function(e){
     if(e.key in keys){
         keys[e.key]=false;
     }
+    character.style.backgroundImage="url('/assets/v-2/charcter/walking/1.gif')";
+
 })
 
 
@@ -29,15 +30,22 @@ function update(){
 
     if(keys.ArrowUp){
         y-=speed;
+        character.style.backgroundImage="url('/assets/v-2/charcter/walking/2.gif')";
     }
     if(keys.ArrowDown){
+        character.style.backgroundImage="url('/assets/v-2/charcter/walking/1.gif')";
+
         y+=speed;
     }
     if(keys.ArrowLeft){
         x-=speed;
+        character.style.backgroundImage="url('/assets/v-2/charcter/walking/4.gif')";
+
     }
     if(keys.ArrowRight){
         x+=speed;
+        character.style.backgroundImage="url('/assets/v-2/charcter/walking/3.gif')";
+
     }
 
     character.style.top=y+"px";
@@ -46,3 +54,22 @@ function update(){
 }
 
 update()
+
+
+
+
+
+
+// Lock Zooming on Desktop
+window.addEventListener('wheel', function(e) {
+    if (e.ctrlKey) {
+        e.preventDefault();
+    }
+}, { passive: false });
+
+window.addEventListener('keydown', function(e) {
+    // Prevent zoom with Ctrl + (+ or - or = or 0)
+    if (e.ctrlKey && (e.key === '+' || e.key === '-' || e.key === '=' || e.key === '0')) {
+        e.preventDefault();
+    }
+});

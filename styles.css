@@ -12,12 +12,22 @@ body{
     background-size: cover;
 }
 .ch{
+
     position: absolute;
     background-image: url("/assets/v-2/charcter/walking/1.gif");
-    height: 8vh;
-    width: 8vb;
-    background-position-x:center;
-    background-position-y:115px;
-    background-size: 200px;
+    height: 84px;
+    width: 58px;
+    background-size: contain;
+    z-index: 9999;
 
+}
+.ha{
+    height: 180px;
+    width: 180px;
+    z-index: 1;
+    position: absolute;
+    left: -20px;
+    background-image: url("/assets/v-2/buildings/h1.png");
+    background-position: center;
+    background-size: cover;
 }
