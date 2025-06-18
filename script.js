@@ -63,7 +63,7 @@ function collison(playerId,objectId){
     }
 
 }
-worldObjects=["ha","hb","hc","tree-1","tree-2","light","b-1"]//id of objects in world
+worldObjects=["ha","hb","hc","tree-1","tree-2","light","b-1","b-2"]//id of objects in world
 function update(){
     prevx=x;
     prevy=y;
