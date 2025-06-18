@@ -27,6 +27,20 @@ body{
 
 
 }
+.ch::after{
+    content: "";
+    background-color: #4d47476b;
+    background-image: none;
+    height: 10px;
+    width: 10px;
+    padding: 1px;
+    left: 22px;
+    bottom: -1px;
+    border-radius: 100px;
+    transform: scale(4);
+    z-index: -2;
+    position: absolute;
+}
 .ch.message{
     font-family: "Pixelify Sans", sans-serif;    color: black;
     font-size: x-large;
@@ -43,7 +57,7 @@ body{
     left: 50px;
     height: 50px;
     width: 100px;
-}
+} 
 .ha{
     
     height: 180px;
@@ -63,7 +77,7 @@ body{
     z-index: -1;
     position: absolute;
     left: 300px;
-    background-image: url("/assets/v-2/buildings/h3.png");
+    background-image: url("/assets/v-2/buildings/h4.png");
     background-position: center;
     background-size: cover;
 
@@ -71,13 +85,14 @@ body{
 
 }
 .hc{
-    top:200px;
+    
+    top:-10px;
     height: 180px;
     width: 180px;
     z-index: 2;
     position: absolute;
-    left: 200px;
-    background-image: url("/assets/v-2/buildings/h3.png");
+    left: 1200px;
+    background-image: url("/assets/v-2/buildings/h5.png");
     background-position: center;
     background-size: cover;
 
@@ -100,6 +115,7 @@ body{
     
 }
 .text_bar{
+    z-index: 99;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -134,4 +150,51 @@ button{
     width: 100px;
     right: 20px;
     bottom: 20px;
+}
+
+.tree{
+    position: absolute;
+    height: 200px;
+    width: 150px;
+    top:420px;
+    left: 400px;
+    background-image: url("/assets//v-2/buildings/t.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.tree::after{
+
+    content: "";
+    background-image: none;
+
+}
+.tree.b{
+    top: 150px;
+}
+.light{
+    background-image: url("/assets/v-2/buildings/light.png");
+    height: 100px;
+    transform: scale(1.5);
+    width: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 200px;
+    left: 1100px;
+
+
+
+}
+
+.bridge{
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    background-color: red;
+    top: 290px;
+    left: 700px;
 }
