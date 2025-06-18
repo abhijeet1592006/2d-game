@@ -9,7 +9,7 @@ body{
 }
 .base{
     margin: 0;
-    background-image: url("/assets/v-2/land/a.png");
+    background-image: url("assets/v-2/land/a.png");
     height: 100vh;
     width: 100dvw;
     background-repeat: no-repeat;
