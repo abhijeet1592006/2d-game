@@ -4,9 +4,26 @@ let speed=2;
 h=document.getElementById("hb")
 character=document.getElementById("ch")
 
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+async function mess() {
+    await sleep(500)
+    document.getElementById("message").style.display="block";  
+
+
+
+    document.getElementById("message").innerText="HELLO!!";
+
+    await sleep(2000)
+    document.getElementById("message").style.display="none";  
+} 
 function start(){
     document.getElementById("tb").style.display="none";
-    document.getElementsByClassName(".ch::after").style.display="none";
+    mess()
 
 }
 
