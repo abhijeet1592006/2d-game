@@ -44,7 +44,7 @@ addEventListener("keyup",function(e){
     if(e.key in keys){
         keys[e.key]=false;
     }
-    character.style.backgroundImage="url('/assets/v-2/charcter/walking/1.gif')";
+    character.style.backgroundImage="url('assets/v-2/charcter/walking/1.gif')";
 
 })
 
