@@ -69,21 +69,21 @@ function update(){
     prevy=y;
     if(keys.ArrowUp){
         y-=speed;
-        character.style.backgroundImage="url('/assets/v-2/charcter/walking/2.gif')";
+        character.style.backgroundImage="url('assets/v-2/charcter/walking/2.gif')";
     }
     if(keys.ArrowDown){
-        character.style.backgroundImage="url('/assets/v-2/charcter/walking/1.gif')";
+        character.style.backgroundImage="url('assets/v-2/charcter/walking/1.gif')";
 
         y+=speed;
     }
     if(keys.ArrowLeft){
         x-=speed;
-        character.style.backgroundImage="url('/assets/v-2/charcter/walking/4.gif')";
+        character.style.backgroundImage="url('assets/v-2/charcter/walking/4.gif')";
 
     }
     if(keys.ArrowRight){
         x+=speed;
-        character.style.backgroundImage="url('/assets/v-2/charcter/walking/3.gif')";
+        character.style.backgroundImage="url('assets/v-2/charcter/walking/3.gif')";
 
     }
 
