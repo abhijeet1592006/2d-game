@@ -53,7 +53,7 @@ function collison(playerId,objectId){
     obj1=document.getElementById(playerId).getBoundingClientRect();
     obj2=document.getElementById(objectId).getBoundingClientRect();
 
-
+   
     if(obj1.right-20>obj2.left&&
         obj2.right>obj1.left+20&&
         obj1.top+70<obj2.bottom&&
