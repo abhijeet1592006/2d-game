@@ -57,12 +57,12 @@ body{
     
 }
 .hb{
-    top:200px;
+    top:0px;
     height: 180px;
     width: 180px;
-    z-index: 2;
+    z-index: -1;
     position: absolute;
-    left: 20px;
+    left: 300px;
     background-image: url("/assets/v-2/buildings/h3.png");
     background-position: center;
     background-size: cover;

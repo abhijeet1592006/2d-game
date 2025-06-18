@@ -54,15 +54,16 @@ function collison(playerId,objectId){
     obj2=document.getElementById(objectId).getBoundingClientRect();
 
 
-    if(obj1.right>obj2.left&&
+    if(obj1.right-20>obj2.left&&
         obj2.right>obj1.left+20&&
         obj1.top+70<obj2.bottom&&
-        obj2.top<obj1.bottom
+        obj2.top<obj1.bottom-70
     ){
         return true
     }
 
 }
+worldObjects=["ha","hb"]
 function update(){
     prevx=x;
     prevy=y;
@@ -97,17 +98,30 @@ function update(){
 
 
 
+    //for checking collison here "ch" is id of player
 
-    if (collison("ch","ha")){
+    for (i of worldObjects){
+        if (collison("ch",i)){
+            x=prevx;
+            y=prevy;
+            character.style.top=y+"px";
+            character.style.left=x+"px";
+        }
+        z(i,"ch")
+    
+
+    }
+    
+    //for bounding area
+    if (y<0 || x<0 || y>window.innerHeight-80 || x>window.innerWidth-50){
         x=prevx;
         y=prevy;
         character.style.top=y+"px";
         character.style.left=x+"px";
+
     }
 
-
-
-    z("ha","ch")
+    
  
     requestAnimationFrame(update)
 }
@@ -124,12 +138,12 @@ function z(targetid,playerid){
 
     let player=document.getElementById(playerid).getBoundingClientRect()
 
-    if(player.bottom<obj.bottom){
-        ob.style.zIndex=2
+    if(player.bottom>obj.bottom){
+        ob.style.zIndex=0
         
     }
     else{
-        ob.style.zIndex=0
+        ob.style.zIndex=2
 
 
     }
