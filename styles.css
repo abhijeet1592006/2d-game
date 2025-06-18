@@ -191,10 +191,11 @@ button{
 }
 
 .bridge{
+
     height: 50px;
-    width: 200px;
+    width: 500px;
     position: absolute;
-    background-color: red;
+    background-color: #000000;
     top: 290px;
-    left: 700px;
+    left: 570px;
 }

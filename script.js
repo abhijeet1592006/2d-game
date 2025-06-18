@@ -63,7 +63,7 @@ function collison(playerId,objectId){
     }
 
 }
-worldObjects=["ha","hb","hc","tree-1","tree-2","light"]//id of objects in world
+worldObjects=["ha","hb","hc","tree-1","tree-2","light","b-1"]//id of objects in world
 function update(){
     prevx=x;
     prevy=y;
@@ -87,12 +87,12 @@ function update(){
 
     }
 
-    if(y>226){
-        h.style.zIndex=0;
-    }
-    if(y<226){
-        h.style.zIndex=2;
-    }
+    // if(y>226){
+    //     h.style.zIndex=0;
+    // }
+    // if(y<226){
+    //     h.style.zIndex=2;
+    // }
     character.style.top=y+"px";
     character.style.left=x+"px";
 
@@ -102,6 +102,7 @@ function update(){
 
     for (i of worldObjects){
         if (collison("ch",i)){
+
             x=prevx;
             y=prevy;
             character.style.top=y+"px";
